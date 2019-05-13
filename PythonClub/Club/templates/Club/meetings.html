@@ -8,7 +8,7 @@
 </tr>
 {% for t in meetings_list %}
 <tr>
-    <td>{{t.meetingtitle}}</td>
+    <td><a href="{% url 'meetingdetail' id=t.id %}">{{t.meetingtitle}}</a></td>
     <td>{{t.meetingagenda}}</td>
 </tr>
 {% endfor %}

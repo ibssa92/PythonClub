@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>{{ meet.meetingtitle }}</h2>
+<p>{{ meet.meetingdate }}</p>
+<p>{{ meet.meetingtime }}</p>
+<p>{{ meet.meetingagenda }}</p>
+
+<p> Number of Meetings: {{ minutescount }}</p>
+<h3>Reviews</h3>
+{% for m in minutes %}
+    <h4>{{ m.attendance }}</h4>
+    <p>{{ m.text }}</p>
+    {% endfor %}
+
+
+
+{% endblock content %}
